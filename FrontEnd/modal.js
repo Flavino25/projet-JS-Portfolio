@@ -48,7 +48,7 @@ stopPro.addEventListener('click', (e)=>{
  
  const reponse = await fetch("http://localhost:5678/api/works/");
  const allWorks = await reponse.json();
-
+//generation des travaux dans la modale
  function afficherWorks(allWorks)
  {
 
