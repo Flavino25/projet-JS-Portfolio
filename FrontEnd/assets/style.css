@@ -1,0 +1,581 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin: auto;
+	font-family: 'Work Sans';
+	font-size: 14px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+
+section {
+	margin: 50px 0
+}
+
+h1 {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1>span {
+	font-family: 'Work Sans';
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	;
+}
+
+h2 {
+	font-family: 'Syne';
+	font-weight: 700px;
+	font-size: 30px;
+	color: #1D6154
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+
+}
+
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+
+}
+
+
+
+li:hover {
+	color: #B1663C;
+}
+
+#introduction {
+	display: flex;
+	align-items: center;
+}
+
+#introduction figure {
+	flex: 1
+}
+
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+
+#contact {
+	width: 50%;
+	margin: auto;
+}
+
+#contact>* {
+	text-align: center;
+
+}
+
+#contact h2 {
+	margin-bottom: 20px;
+}
+
+#contact form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#contact label {
+	margin: 2em 0 1em 0;
+}
+
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"] {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 2em auto;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 4em
+}
+
+
+.global {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+
+
+}
+
+
+.global h2 {
+	margin-bottom: 20px;
+}
+
+.global form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.global input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+
+}
+
+.global a {
+
+	color: black;
+
+}
+
+#log {
+	text-decoration: none;
+	color: black;
+}
+
+.tous,
+.objets,
+.appartements,
+.hotels {
+
+
+	border-radius: 20px;
+	height: 2rem;
+	width: 10rem;
+}
+
+.tous:focus,
+.objets:focus,
+.appartements:focus,
+.hotels:focus {
+	background-color: #1D6154;
+
+}
+
+.tous2,
+.objets2,
+.appartements2,
+.hotels2 {
+	display: none;
+	 }
+
+
+.hidden {
+
+	display: none;
+
+
+
+}
+
+.warning {
+	display: block;
+	color: red;
+}
+
+header {
+	padding-top: 4.9vh;
+}
+
+#banner {
+	background-color: rgb(30, 29, 29);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .7rem;
+
+}
+
+i {
+	color: white;
+	size: 40px;
+
+}
+
+h3 {
+	color: white;
+}
+
+.info {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+.pub {
+	border-radius: 20px;
+	height: 2rem;
+	width: 10rem;
+
+}
+
+#edit2,
+#bantexte {
+	color: rgb(167, 163, 163);
+	padding: 5px;
+
+}
+
+#basfig1 {
+
+	display: flex;
+	margin: 10px;
+
+
+	padding-left: 7%;
+}
+
+
+
+#edit3,
+#bantexte2 {
+	color: rgb(155, 138, 138);
+	padding: 5%;
+
+}
+
+#basfig2 {
+	display: flex;
+	margin: 10px;
+
+}
+
+#titrproj {
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+
+}
+
+
+#but1 {
+	background-color: white;
+	border: none;
+	text-decoration: none;
+
+}
+
+#but2 {
+	background-color: white;
+	border: none;
+	text-decoration: none;
+
+}
+
+
+
+#modal1 {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+
+}
+
+.modal-wrapper {
+
+	overflow: auto;
+	background-color: white;
+	width: 600px;
+	height: 800px;
+
+	padding: 20px;
+
+}
+
+#modalfig figure img {
+
+	width: 100px;
+
+}
+#modalfig figure{
+	position: relative;
+}
+.fa-trash-can {
+  position: absolute;	
+  color: white;
+  padding: .2rem;
+  background-color: black;
+  top: 5px;
+  right: 5px;
+}
+
+#modalfig {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+#titlemodal {
+	
+	align-items: center;
+	color: black;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+#butmod1 {
+
+	align-items: center;
+	border-radius: 25px;
+	height: 2rem;
+	width: 10rem;
+	background-color: green;
+	color: aliceblue;
+	margin-left: 35%;
+}
+
+#modalfig #butmod1 {
+    display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+#vector {
+	justify-content: center;
+	align-items: right;
+
+	color: red;
+	margin-left: ;
+
+
+
+}
+
+.js-modal-close {
+	background-color: white;
+	border: none;
+	float: right;
+
+}
+
+#log:hover { 
+	color: #B1663C;
+}
+
+
+ #or{ 
+	background-color: rgb(239, 22, 94);
+	height: 2px;
+ }
+  #pmod1 { 
+	color: red;
+	margin-left: 37%;
+	padding-top: 10%;
+	font-family: 'Syne';
+  }
+
