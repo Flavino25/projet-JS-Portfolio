@@ -88,6 +88,22 @@ document.querySelector("#butmod1").addEventListener("click", function(){
     modal1.style.display="none";
 })
 
+document.querySelector(".fa-arrow-left").addEventListener("click", function(e)
+{e.preventDefault()
+    const modr= document.querySelector("#modal2")
+    modr.style.display ="none";
+
+    const modr1= document.querySelector("#modal0")
+    modr1.style.display ="block";
+
+
+})
+
+
+
+
+
+
 // const stopPro2 = document.querySelector(".modal-wrapper")
 // stopPro2.addEventListener('click', (e)=>{
 //     e.stopPropagation()
