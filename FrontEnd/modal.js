@@ -7,6 +7,10 @@ const openModal= function(e) {
    target.style.display = null
    target.removeAttribute('aria-hidden')
    target.setAttribute ('aria-modal', 'true')
+   const modal2 = document.querySelector('#modal2')
+   modal2.style.display= "none"
+   const modal1= document.querySelector("#modal0")
+    modal1.style.display="block"
    
 }
 const btn1 = document.querySelectorAll('.js-modal').forEach(button => {
@@ -22,20 +26,18 @@ const closeModal= function(e) {
     target.removeAttribute ('aria-modal')
     console.log('flavien')
  }
- const btnClose = document.querySelector('.js-modal-close')
- btnClose.addEventListener('click', closeModal)
+ const btn2 = document.querySelectorAll('.js-modal-close').forEach(button => {
+    button.addEventListener('click', closeModal)
+});
 
  const windowClose = document.querySelector('#modal1')
- windowClose.addEventListener('click', closeModal)
+ windowClose.addEventListener('click', closeModal )
+
 
 const stopPro = document.querySelector('.modal-wrapper')
 stopPro.addEventListener('click', (e)=>{
     e.stopPropagation()
 })
-
-
-
-
 
  window.addEventListener('keydown', function(e){ 
     if (e.key === "Escape" || e.key === "Esc"){
@@ -43,9 +45,6 @@ stopPro.addEventListener('click', (e)=>{
     }
 } )
 
-
-
- 
  const reponse = await fetch("http://localhost:5678/api/works/");
  const allWorks = await reponse.json();
 //generation des travaux dans la modale
@@ -77,7 +76,28 @@ stopPro.addEventListener('click', (e)=>{
  afficherWorks(allWorks);
 
 const modal2 = document.querySelector('#modal2')
+modal2.addEventListener('click', (e)=>{
+    e.stopPropagation()
+})
 modal2.style.display = "none";
+
+document.querySelector("#butmod1").addEventListener("click", function(){
+    // e.preventDefault()
+    modal2.style.display = "block";
+    const modal1= document.querySelector("#modal0")
+    modal1.style.display="none";
+})
+
+// const stopPro2 = document.querySelector(".modal-wrapper")
+// stopPro2.addEventListener('click', (e)=>{
+//     e.stopPropagation()
+// })
+
+
+
+
+
+
 
 /*modal.querySelector('js-modal-close').addEventlistener('click',closeModal)
 modal.querySelector('js-modal-stop').addEventlistener('click',stopPropagation)
