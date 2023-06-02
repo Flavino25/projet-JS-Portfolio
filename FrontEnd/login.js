@@ -1,4 +1,4 @@
-const Url ="http://localhost:5678/api/user/login/";
+const Url ="http://localhost:5678/api/users/login/";
 const flog = document.querySelector("#flog");
 flog.addEventListener('submit' , function(e) { 
   e.preventDefault();
@@ -18,11 +18,12 @@ flog.addEventListener('submit' , function(e) {
       password: "S0phie"
   }
   const payload = JSON.stringify(user)
+  window.localStorage.setItem('user', JSON.stringify(userIdentifier))
   fetch(Url, { 
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: payload
-  }).then((res) => res.json())
+  }).then((res) => res.json()).then((donnees)=>window.localStorage.setItem("token", donnees.token));
 
   if (JSON.stringify(user) === JSON.stringify(userIdentifier)) { 
       window.location = "./indexban.html";

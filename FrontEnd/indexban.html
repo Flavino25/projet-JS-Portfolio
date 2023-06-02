@@ -61,23 +61,40 @@
 				<div id="modal2" class="modal-wrapper js-modal-stop">
 					<button class="js-modal-close"><i class="fa-solid fa-rectangle-xmark" id="vector"></i></button>
 					<h1 id="titlemodal"> gallerey</h1> <br>
+					<i class="fa-solid fa-arrow-left"></i> <br>
 					<div id="modalfig">
-						<i class="fa-thin fa-arrow-left"></i> <br>
-						<h3 id="paj"> Ajout photo</h3> 
-
-						<div class="ajt">
-
+						
+						<h3 id="pajt"> Ajout photo</h3>
+				<form class="envoyertravo" action="submit">
+					<div class="ajt">
 						<i class="fa-sharp fa-solid fa-image"></i>
-						 <p id="ajtfoto"> + Ajouter photo </p>
-					     </div>
-
+						<label for="inputfile" id="ajtfoto">+ Ajouter photo</label>
+						<input type="file" id="inputfile" style="display: none;">
+						<span> jpg, png : 4 mo max</span>
+				
 					</div>
-
+					<div class="rub">
+						<div class="boite1">
+							<label> Titre</label>
+							<input id="bt1" type="text">
+						</div>
+						<div class="boite2">
+							<label> catégorie</label>
+							<select name="catégorie" id="bt2">
+								<option value=""></option>
+								<option value="Objets">Objets</option>
+								<option value="Hotels">Hotels</option>
+								<option value="Appartements">Appartements</option>
+							</select>
+						</div>
+					</div>
+				
 					<hr id="or">
 					<button id="butmod1"> Valider</button>
 					<!--<p id="pmod1"> supprimer la galery</p> !-->
-				</div>
-
+					</div>
+					</div>
+				</form>
 				
 			</aside>
 			

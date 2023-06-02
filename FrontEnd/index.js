@@ -64,6 +64,3 @@ console.log (HotelsFiltrees);
 
 
 
-
-
-

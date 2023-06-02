@@ -39,3 +39,4 @@ document.querySelectorAll('js-modal').forEach(a=> {a.addEventListener('click', o
 window.addEventListener('keydown', function (e){ 
     if (e.key === "Escape" || e.key === "Esc") { closeModal}
 } )*/
+<p id="ajtfoto"> + Ajouter photo </p>

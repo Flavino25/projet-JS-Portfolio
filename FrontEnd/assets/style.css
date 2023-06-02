@@ -394,8 +394,10 @@ i {
 
 }
 
-h3 {
-	color: white;
+.envoyertravo{
+	display: flex;
+	flex-direction: column;
+	width: 600px;
 }
 
 .info {
@@ -531,7 +533,7 @@ h3 {
 	border-radius: 25px;
 	height: 2rem;
 	width: 10rem;
-	background-color: green;
+	background-color: rgb(137, 146, 137);
 	color: aliceblue;
 	margin-left: 35%;
 }
@@ -550,8 +552,6 @@ h3 {
 	align-items: right;
 
 	color: red;
-	margin-left: ;
-
 
 
 }
@@ -568,10 +568,10 @@ h3 {
 }
 
 
- #or{ 
-	background-color: rgb(239, 22, 94);
-	height: 2px;
- }
+#or { 
+	color: rgb(154, 144, 144);
+	width: 30rem;
+}
   #pmod1 { 
 	color: red;
 	margin-left: 37%;
@@ -582,28 +582,40 @@ h3 {
 
 	color: black;
 	
+	
 
 
 }
-#paj { 
-	justify-content: center;
-	margin: 10px;
+#pajt { 
+margin-left: 10%;
+	margin: 0px;
+	padding: 0px;
+    position: absolute;
+}
+.rub {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 3rem;
+	padding: 1rem;
 }
 
 .ajt{ 
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #e2d8d2;
+	background-color: #d0e2c8;
 	height: 200px;
-	width: 500px;
+	width: 100%;
 	margin-top: 10%;
+	flex-direction: column;
 }
 .fa-sharp {
 
-	
+	font-size: 4rem;
 	justify-content: center;
-	height: 40px;
+	height: 10px;
+	width: 40px;
 	
 
 }
@@ -611,9 +623,37 @@ h3 {
 #ajtfoto{ 
 	 margin-top: 10%;
 	 background-color: #e1faf5;
-	 height: 30px;
-	 border-radius: 25px;
-	 justify-content: center;
-	 align-items: center;
-	 text-align: center;
+	 height: 35px;
+	 width: 10rem;
+	 border-radius: 30px;
+	
+}
+
+
+.boite1{
+	
+	flex-direction: column;
+	margin-left: 7%;
+	width: 8rem;
+	
+	
+}
+
+.boite2{ 
+	flex-direction: column;
+	width: 8rem;
+	margin-left: 7%;
+	
+}
+
+
+#bt1 { 
+	height: 3rem;
+	width: 30rem;
+	
+}
+
+#bt2 { 
+	height: 3rem;
+	width: 30rem;
 }
