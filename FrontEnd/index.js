@@ -25,42 +25,54 @@ function afficherWorks(allWorks){
  
 afficherWorks(allWorks);
 
-const bouton = document.querySelector(".tous");
-bouton.addEventListener("click", function () { const figureFiltre = allWorks.filter(function(work){ 
-    return work;
-}); 
-document.querySelector(".gallery").innerHTML = "";
-afficherWorks(figureFiltre);
-console.log (figureFiltre);
-} );
+// const bouton = document.querySelector(".tous");
+// bouton.addEventListener("click", function () { 
+//     const figureFiltre = allWorks.filter(function(work){ 
+//     return work;
+// }); 
+// document.querySelector(".gallery").innerHTML = "";
+// afficherWorks(figureFiltre);
+// console.log (figureFiltre);
+// } );
 
-const boutonObjet = document.querySelector(".objets");
-boutonObjet.addEventListener("click", function () { const objetsFiltrees = allWorks.filter(function(work){ 
-    return work.categoryId===1;
-}); 
-document.querySelector(".gallery").innerHTML = "";
-afficherWorks(objetsFiltrees);
-console.log (objetsFiltrees);
-} );
+// const boutonObjet = document.querySelector(".objets");
+// boutonObjet.addEventListener("click", function () { 
+//     const objetsFiltrees = allWorks.filter(function(work){ 
+//     return work.categoryId===1;
+// }); 
+// document.querySelector(".gallery").innerHTML = "";
+// afficherWorks(objetsFiltrees);
+// console.log (objetsFiltrees);
+// } );
 
-const boutonAppart = document.querySelector(".appartements");
-boutonAppart.addEventListener("click", function () { const appartementsFiltrees = allWorks.filter(function(work){ 
-    return work.categoryId===2;
-}); 
-document.querySelector(".gallery").innerHTML = "";
-afficherWorks(appartementsFiltrees);
-console.log (appartementsFiltrees);
-} );
+// const boutonAppart = document.querySelector(".appartements");
+// boutonAppart.addEventListener("click", function () { 
+//     const appartementsFiltrees = allWorks.filter(function(work){ 
+//     return work.categoryId===2;
+// }); 
+// document.querySelector(".gallery").innerHTML = "";
+// afficherWorks(appartementsFiltrees);
+// console.log (appartementsFiltrees);
+// } );
 
-const boutonHotel = document.querySelector(".hotels");
-boutonHotel.addEventListener("click", function () { const HotelsFiltrees = allWorks.filter(function(work){ 
-    return work.categoryId===3;
-}); 
-document.querySelector(".gallery").innerHTML = "";
-afficherWorks(HotelsFiltrees);
-console.log (HotelsFiltrees);
-} );
+// const boutonHotel = document.querySelector(".hotels");
+// boutonHotel.addEventListener("click", function () {
+//      const HotelsFiltrees = allWorks.filter(function(work){ 
+//     return work.categoryId===3;
+// }); 
+// document.querySelector(".gallery").innerHTML = "";
+// afficherWorks(HotelsFiltrees);
+// console.log (HotelsFiltrees);
+// } );
+
+const monToken = window.localStorage.getItem('token')
+
+const logout = document.querySelector('#log')
+
+logout.addEventListener('click', function(){
+        console.log('Suppression reussi')
+        window.localStorage.removeItem('token')
+})
 
 
-
-
+console.log('TEst')

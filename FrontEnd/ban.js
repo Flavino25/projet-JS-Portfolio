@@ -1,42 +1,55 @@
-/*let modal = null
+const reponse = await fetch("http://localhost:5678/api/works/");
+const allWorks = await reponse.json();
+console.log(allWorks);
 
-const openModal = function(e) {
-    e.preventDefault()
-    const target = document.querySelector(e.target.getAttribute('href'))
-    target.style.display = null
-    target.removeAttribute('aria-hidden',)
-    target.setAttribute('aria-modal', 'true')
-    modal = target
-    modal.addEventListener ('click', closeModal)
-    modal.querySelector('js-modal-close').addEventListener('click', closeModal)
-    modal.querySelector('.js-modal-close').addEventListener('click', stopPropagation)
-}
-const closeModal = function (e) { 
-    if (modal === null) return
-    
-    
-    e.preventDefault()
 
-    
-    modal.style.display = "none"
-    modal.setAttribute('aria-hidden', 'true')
-    modal.removeAttribute('aria-modal')
-   
-    modal.removeEventListener ('click', closeModal)
-    modal.querySelector('.js-modal-close').removeEventListener('click', closeModal)
-    modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation)
-    modal = null
-}
 
-const stopPropagation = function(e) {
-    e.stopPropagation()
-}
 
-document.querySelectorAll('js-modal').forEach(a=> {a.addEventListener('click', openModal)
+function afficherWorks(allWorks){
 
+    for (let i=0; i < allWorks.length; i++) { 
+        const figure = allWorks[i];
+        const sectionFigure = document.createElement("figure");
+        const imageElement = document.createElement("img");
+        imageElement.src = figure.imageUrl;
+        const nomElement = document.createElement("p");
+        nomElement.innerText = figure.title;
+        
+        
+        const sectiongallery = document.querySelector(".gallery");
+        sectiongallery.appendChild(sectionFigure);
+        sectionFigure.appendChild(imageElement);
+        sectionFigure.appendChild(nomElement);
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+ 
+afficherWorks(allWorks);
+
+
+const monToken = window.localStorage.getItem('token')
+
+const logout = document.querySelector('#log')
+
+logout.addEventListener('click', function(){
+        console.log('Suppression reussi')
+        window.localStorage.removeItem('token')
 })
 
-window.addEventListener('keydown', function (e){ 
-    if (e.key === "Escape" || e.key === "Esc") { closeModal}
-} )*/
-<p id="ajtfoto"> + Ajouter photo </p>
+const form = document.querySelector('.envoyertravo')
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+    const imageEnvoi = document.querySelector('#inputfile').value
+    const titre = document.querySelector('#bt1').value
+    const categorie = document.querySelector('#bt2').value
+
+    const formData = new FormData()
+
+    form.append('image', imageEnvoi)
+    form.append('title', titre)
+    form.append('category', categorie)
+
+    fetch('http://localhost:5678/api/works',{
+        method: 'POST',
+        headers
+    })
+})

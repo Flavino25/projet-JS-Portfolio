@@ -23,19 +23,23 @@ flog.addEventListener('submit' , function(e) {
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: payload
-  }).then((res) => res.json()).then((donnees)=>window.localStorage.setItem("token", donnees.token));
+  }).then((res) =>
+  {
+    if (JSON.stringify(user) === JSON.stringify(userIdentifier)) { 
+        window.location = "./indexban.html";
+        
+  
+         } else if (emailOfuser !== firstIdentifier){ 
+            document.querySelector("#message").classList.add('warning')
+  
+         } else if (passwordOfUser !== lastIdentifier) { 
+            document.querySelector("#message2").classList.add('warning')
+         } else { 
+            document.querySelector('#flog').innerHTML = "Accés Refusé"
+         }
+         return res.json()
+  } ).then((donnees)=>window.localStorage.setItem("token", donnees.token));
 
-  if (JSON.stringify(user) === JSON.stringify(userIdentifier)) { 
-      window.location = "./indexban.html";
-      
-
-       } else if (emailOfuser !== firstIdentifier){ 
-          document.querySelector("#message").classList.add('warning')
-
-       } else if (passwordOfUser !== lastIdentifier) { 
-          document.querySelector("#message2").classList.add('warning')
-       } else { 
-          document.querySelector('#flog').innerHTML = "Accés Refusé"
-       }
+  
         
   } );

@@ -77,7 +77,7 @@ stopPro.addEventListener('click', (e)=>{
           let monToken = localStorage.getItem("token");
           console.log(iconeElement);
           console.log("icone:", iconeElement,'cliké!!')
-          let response = await fetch(
+          await fetch(
             `http://localhost:5678/api/works/${iconeElement}`,
             {
               method: "DELETE",
@@ -122,6 +122,10 @@ document.querySelector(".fa-arrow-left").addEventListener("click", function(e)
 
 
 })
+
+
+
+
 
 //Ajout photo
 
