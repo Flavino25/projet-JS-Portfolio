@@ -36,20 +36,37 @@ logout.addEventListener('click', function(){
 })
 
 const form = document.querySelector('.envoyertravo')
-form.addEventListener('submit', function(e){
+form.addEventListener('submit',async function(e){
     e.preventDefault()
-    const imageEnvoi = document.querySelector('#inputfile').value
+    const imageEnvoi = document.querySelector('#inputfile')
     const titre = document.querySelector('#bt1').value
     const categorie = document.querySelector('#bt2').value
 
-    const formData = new FormData()
+    let formData = new FormData()
 
-    form.append('image', imageEnvoi)
-    form.append('title', titre)
-    form.append('category', categorie)
+    formData.append('image', imageEnvoi.files[0])
+    formData.append('title', titre)
+    formData.append('category', categorie)
 
-    fetch('http://localhost:5678/api/works',{
+    await fetch('http://localhost:5678/api/works/',{
         method: 'POST',
-        headers
+        headers:{
+            'Authorization': `Bearer ${monToken}`
+        },
+        body: formData
+    }).then((res)=>{
+        if(res.ok){
+            console.log("Requete reussi!")
+        }else{
+            alert("Erreur dans le formulaire")
+        }
     })
+})
+
+const imageEnvoi = document.querySelector('#inputfile')
+const imageChoisi = document.querySelector('#photo-ajt')
+
+imageEnvoi.addEventListener('change', ()=>{
+    imageChoisi.src = URL.createObjectURL(imageEnvoi.files[0]);
+    imageChoisi.style.display = "block";
 })
